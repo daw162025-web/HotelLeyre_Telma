@@ -37,7 +37,7 @@
             
     <div class="container mt-5 text-center">
        <h1 class="mb-1">Bienvenido a Leyre Pamplona</h1>
-       <h5 class="mb-4">En un enclave lleno de historia, haz tu reserva ya.</h5>
+        <h2 class="h5 mb-4">En un enclave lleno de historia, haz tu reserva ya.</h2>
    </div>
 
     <!-- FORMULARIO -->
@@ -46,9 +46,11 @@
       <div class="row g-3"> <!--row para que sea horizontar con espaciado de 3 (g-3)-->
         <!-- row tiene 12 columnas imaginarias -->
         <div class="col-12 col-md"> <!--col-12 si es pequeño ocupa todo el ancho / col-md pantalla mediana o grande columna flexible-->
-             <input type="text" class="form-control" placeholder="Entrada" aria-label="Entrada" id="fecha-entrada" name="fecha_entrada">
+          <label for="fecha-entrada">Entrada</label>   
+          <input type="text" class="form-control" placeholder="Entrada" aria-label="Entrada" id="fecha-entrada" name="fecha_entrada" >
         </div>
         <div class="col-12 col-md">
+          <label for="fecha-salida">Salida</label> 
             <input type="text" class="form-control" placeholder="Salida" aria-label="Salida" id="fecha-salida" name="fecha_salida">
         </div>
         <div class="col-12 col-md dropdown"> 
@@ -75,7 +77,8 @@
         </div>
 
          <div class="col-12 col-md">
-            <input type="text" class="form-control" placeholder="Código promocional" aria-label="Código promocional" name="codigo_promocional">
+            <label for="codigo_promocional">Código Promocional</label>   
+            <input type="text" id="codigo_promocional" class="form-control" placeholder="Código promocional" aria-label="Código promocional" name="codigo_promocional">
         </div>
     
         <div class="col-12 col-md">
@@ -96,7 +99,7 @@
                     <div class="text-center p-3">
                     <img src="imagenes/comedor.jpg" class="img- fluid card-img-top imagen-reducida" alt="Desayuno Buffet">
                     <div class="card-body">
-                        <h5 class="card-title">Desayuno Buffet</h5>
+                        <h4 class="card-title">Desayuno Buffet</h4>
                         <p class="card-text">Degusta nuestro desayuno buffet! Horario: Del lunes a viernes de 07:30 a 10:30h Sábados, domingos y festivos de 08:00 a 11:00h.</p>
                     
                     </div>
@@ -108,7 +111,7 @@
                     <div class="text-center p-3">
                     <img src="imagenes/gymR.jpg" class="img- fluid card-img-top imagen-reducida" alt="Gimnasio">
                     <div class="card-body">
-                        <h5 class="card-title">Gimnasio</h5>
+                        <h4 class="card-title">Gimnasio</h4>
                         <p class="card-text">Disfruta de las mejores vacaciones y si necesitas un break para hacer deporte, accede a nuestro servicio de Gimnasio GRATUITO para todos nuestros clientes.</p>
                     
                     </div>
@@ -120,7 +123,7 @@
                     <div class="text-center p-3">
                     <img src="imagenes/habitaacionDobleR.jpg" class="img- fluid card-img-top imagen-reducida" alt="Wifi gratuito">
                     <div class="card-body">
-                        <h5 class="card-title">Wifi gratuito</h5>
+                        <h4 class="card-title">Wifi gratuito</h4>
                         <p class="card-text">¡Sigue conectado en todo momento! Aprovecha nuestra conexión wifi de 300 megas disponible en todo el hotel.</p>
                     
                     </div>
@@ -132,7 +135,7 @@
                     <div class="text-center p-3">
                     <img src="imagenes/parkingR.jpg" class="img- fluid card-img-top imagen-reducida" alt="Aparcamiento">
                     <div class="card-body">
-                        <h5 class="card-title">Parking concertado</h5>
+                        <h4 class="card-title">Parking concertado</h4>
                         <p class="card-text">¿Vienes en coche? No te preocupes, disponemos de parking concertado a la vuelta de la manzana.</p>
                     
                     </div>
@@ -168,10 +171,12 @@
         
         <form class="mt-3">
           <div class="mb-2">
-            <input class="form-control" type="text" placeholder="Nombre" aria-label="Nombre">
+            <label for="nombre">Nombre</label>  
+            <input class="form-control" id="nombre" type="text" placeholder="Nombre" aria-label="Nombre">
           </div>
           <div class="mb-2">
-            <input class="form-control" type="email" placeholder="Introduce tu email" aria-label="Email">
+            <label for="email">Email</label> 
+            <input class="form-control" id="email" type="email" placeholder="Introduce tu email" aria-label="Email">
           </div>
           <button type="submit" class="btn btn-suscrib w-100">Suscribirme</button>
         </form>
@@ -189,8 +194,8 @@
         <hr class="mt-4">
         <div class="d-flex justify-content-between align-items-center pt-3">
             <ul class="nav px-4">
-              <li class="nav-item me-3"><a href="#" class="nav-link p-0 text-body-secondary"><img src="imagenes/facebook.png" width="20px" height="20px"> Facebook </a></li>
-              <li class="nav-item"><a href="#" class="nav-link p-0 text-body-secondary"> <img src="imagenes/insta.png" width="20px" height="20px"> Instagram</a></li>
+              <li class="nav-item me-3"><a href="#" class="nav-link p-0 text-body-secondary"><img src="imagenes/facebook.png" alt="Perfil de Facebook" width="20px" height="20px"> Facebook </a></li>
+              <li class="nav-item"><a href="#" class="nav-link p-0 text-body-secondary"> <img src="imagenes/insta.png" alt="Perfil de Instagram" width="20px" height="20px"> Instagram</a></li>
             </ul>
           <div class=" d-flex flex-wrap g-4 justify-content-end">
             <a href="#" class="text-muted me-3">Política de privacidad</a>
