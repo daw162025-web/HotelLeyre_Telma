@@ -52,6 +52,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <h2 class="h5 mb-4">En un enclave lleno de historia, haz tu reserva ya.</h2>
    </div>
 
+   <div id="banner-oferta" class="bg-warning text-dark text-center py-2 fw-bold w-100" style="position: fixed; top: 0; left: 0; z-index: 9999; transform: translateY(-100%); opacity: 0;">
+  🎉 Oferta especial: Usa el código LEYRE10 para un 10% de descuento.
+</div>
+
     <!-- FORMULARIO -->
     <form >
     <div class="container mt-4 p-5 form-costum"> <!--centra el contenido y da margener a los lados con container / mt-4 margin top 4-->
@@ -94,7 +98,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
     
         <div class="col-12 col-md">
-            <button type="submit" class="btn btn-custom w-100">RESERVAR</button>
+            <button type="submit" class="btn btn-custom w-100 animacion-2d">RESERVAR</button>
         </div>
       </div>
     </div>
@@ -165,13 +169,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
     </div>
 
-    <div class="container mt-5">
+    <div class="container mt-5 contenedor-3d">
     <h2 class="text-center mb-4">Descubre el Hotel Leyre</h2>
     
-    <div class="row">
-        <div class="col-md-6 mb-3">
+    <div class="row tarjeta-3d">
+        <div class="col-md-6 mb-3 cara-frente">
             <img src="imagenes/habitacion.jpg" alt="Habitación Doble Premium" class="img-fluid rounded shadow-sm">
         </div>
+        <div class="cara-atras shadow">
+      <h3>Desde 120€/noche</h3>
+      <p>Desayuno incluido</p>
+    </div>
 
         <div class="col-md-6 mb-3">
             <img src="imagenes/desayuno.jpg" alt="Desayuno Buffet" class="img-fluid rounded shadow-sm">
@@ -262,47 +270,35 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             minDate: "today",
         });
     </script>
-
-    <!-- <script>
-    // Espera a que todo el HTML esté cargado
-    document.addEventListener("DOMContentLoaded", function() {
-
-        // 1. Seleccionamos los elementos que necesitamos por su ID
-        const btnOcupacion = document.getElementById("btn_ocupacion");
-        const btnAplicar = document.getElementById("btn_aplicar");
-        
-        const inputAdultos = document.getElementById("adultos");
-        const inputNinos = document.getElementById("ninos");
-        const inputHabitaciones = document.getElementById("habitaciones");
-
-        // 2. Creamos una función que se ejecutará al hacer clic en "Aplicar"
-        btnAplicar.addEventListener("click", function() {
-        
-        // 3. Leemos los valores de los inputs
-        const numAdultos = inputAdultos.value;
-        const numNinos = inputNinos.value;
-        const numHabitaciones = inputHabitaciones.value;
-
-        // 4. Creamos el nuevo texto
-        const nuevoTexto = `${numAdultos} Adultos, ${numNinos} Niños, ${numHabitaciones} Hab.`;
-
-        // 5. Actualizamos el texto del botón principal
-        btnOcupacion.textContent = nuevoTexto;
-
-        // 6. (Opcional pero recomendado) Cerramos el dropdown
-        // Buscamos la instancia del dropdown de Bootstrap asociada al botón y la ocultamos
-        const dropdownInstance = bootstrap.Dropdown.getInstance(btnOcupacion);
-        if (dropdownInstance) {
-            dropdownInstance.hide();
-        }
-        });
-    });
-    </script> -->
+<script>
+  // Esperamos a que la página cargue completamente
+  window.addEventListener('DOMContentLoaded', (event) => {
+    
+    // Seleccionamos el banner
+    const banner = document.getElementById('banner-oferta');
+    
+    // Configuramos un pequeño retraso de 1 segundo (1000ms)
+    setTimeout(() => {
+      // Usamos la Web Animations API de JavaScript
+      banner.animate([
+        // Estado inicial (arriba y transparente)
+        { transform: 'translateY(-100%)', opacity: 0 },
+        // Estado final (posición normal y visible)
+        { transform: 'translateY(0)', opacity: 1 }
+      ], {
+        // Opciones de la animación
+        duration: 800, // Tarda 0.8 segundos
+        easing: 'ease-out', // Empieza rápido y frena al final
+        fill: 'forwards' // Se queda en el estado final al terminar
+      });
+    }, 1000); // 1000ms de espera antes de empezar
+    
+  });
+</script>
 
     </body>
 
 </html>
-
 
 
 
