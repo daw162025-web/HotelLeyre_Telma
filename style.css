@@ -49,3 +49,64 @@ body{
     max-height: 400px !important;
 
 }
+
+/* Definimos la animación 2D llamada 'latido' */
+@keyframes latido {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); } /* Aumenta su tamaño un 5% */
+  100% { transform: scale(1); }
+}
+
+/* Clase para aplicar la animación */
+.animacion-2d {
+  animation: latido 2s ease-in-out infinite;
+  display: inline-block;
+}
+
+/* Contenedor que da la perspectiva 3D */
+.contenedor-3d {
+  perspective: 1000px;
+  width: 300px;
+  height: 200px;
+  margin: 0 auto;
+}
+
+/* La tarjeta que girará */
+.tarjeta-3d {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d; /* Mantiene el efecto 3D en los hijos */
+  position: relative;
+}
+
+/* El efecto al pasar el ratón: rotación en el eje Y */
+.contenedor-3d:hover .tarjeta-3d {
+  transform: rotateY(180deg);
+}
+
+/* Las caras de la tarjeta */
+.cara-frente, .cara-atras {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden; /* Oculta la cara cuando está de espaldas */
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+}
+
+.cara-frente {
+  background-color: #343a40; /* Puedes cambiarlo por una imagen de fondo */
+  background-image: url('imagenes/habitacion.jpg'); /* Usa tu imagen estática aquí */
+  background-size: cover;
+}
+
+.cara-atras {
+  background-color: #d4af37; /* Color dorado elegante */
+  transform: rotateY(180deg); /* Empieza girada */
+  flex-direction: column;
+}.
